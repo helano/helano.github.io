@@ -62,9 +62,10 @@ function displayResults(results, type) {
     const resultDiv = document.createElement('div');
     resultDiv.classList.add('result', 'd-flex', 'align-items-start');
     resultDiv.innerHTML = `
+    <a onclick="${type === 'channel' ? `window.open('${link}', '_blank')` : `playContent('${id}', '${type}')`}">
       <img src="${snippet.thumbnails.default.url}" alt="Thumbnail" class="me-3" width="120">
       <div>
-        <h3><a onclick="${type === 'channel' ? `window.open('${link}', '_blank')` : `playContent('${id}', '${type}')`}">${title}</a></h3>
+        <h3><a onclick="${type === 'channel' ? `window.open('${link}', '_blank')` : `playContent('${id}', '${type}')`}">${title}</h3>
         <p>${snippet.description}</p>
       </div>
     `;
@@ -108,6 +109,7 @@ function playContent(id, type) {
   }
 
   player.style.display = 'block';
+  window.scrollTo(0,0)
 }
 
 // Toggle between light and dark mode
@@ -142,5 +144,3 @@ window.addEventListener('DOMContentLoaded', () => {
     themeIcon.classList.add('fa-sun');
   }
 });
-
-
