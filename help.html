@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Generate a YouTube API Key</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .step {
+            margin-bottom: 20px;
+        }
+        .note {
+            background: #e7f3fe;
+            padding: 10px;
+            border-left: 4px solid #2196F3;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>How to Generate Your YouTube API Key</h1>
+        <p>This guide will help you generate your own YouTube Data API key. You can use this API key to interact with YouTube's data programmatically, such as retrieving video information, managing playlists, and more.</p>
+
+        <h2>Steps to Generate a YouTube API Key</h2>
+
+        <div class="step">
+            <h3>Step 1: Go to the Google Cloud Console</h3>
+            <p>Visit the <a href="https://console.cloud.google.com/" target="_blank">Google Cloud Console</a>. Log in with your Google account if you haven’t already.</p>
+        </div>
+
+        <div class="step">
+            <h3>Step 2: Create a New Project</h3>
+            <p>Once logged in, click on the <strong>"Select a Project"</strong> dropdown at the top of the page. Then, click <strong>"New Project"</strong> and give it a meaningful name, such as "YouTube API Project". Click <strong>"Create"</strong>.</p>
+        </div>
+
+        <div class="step">
+            <h3>Step 3: Enable the YouTube Data API</h3>
+            <p>In the Google Cloud Console, navigate to <strong>APIs & Services > Library</strong>. Search for <strong>YouTube Data API v3</strong>, click on it, and then click the <strong>Enable</strong> button.</p>
+        </div>
+
+        <div class="step">
+            <h3>Step 4: Create API Credentials</h3>
+            <p>Go to <strong>APIs & Services > Credentials</strong> and click on <strong>"Create Credentials"</strong>. Choose <strong>"API Key"</strong>. Your new API key will appear in a popup. Copy it and save it somewhere secure.</p>
+        </div>
+
+        <div class="step">
+            <h3>Step 5: Restrict Your API Key</h3>
+            <p>For security purposes, it is recommended to restrict your API key:</p>
+            <ul>
+                <li>In the <strong>Credentials</strong> tab, click the edit icon next to your API key.</li>
+                <li>Under <strong>Key Restrictions</strong>, specify <strong>"HTTP referrers"</strong> or other restrictions based on your use case.</li>
+                <li>Click <strong>Save</strong>.</li>
+            </ul>
+        </div>
+
+        <div class="note">
+            <strong>Note:</strong> API keys should be kept private. Do not expose them in client-side code or public repositories.
+        </div>
+
+        <h2>Conclusion</h2>
+        <p>You now have your YouTube API key ready to use. You can integrate it into your applications to access YouTube's data. For more details, refer to the <a href="https://developers.google.com/youtube/registering_an_application" target="_blank">YouTube API documentation</a>.</p>
+    </div>
+</body>
+</html>
